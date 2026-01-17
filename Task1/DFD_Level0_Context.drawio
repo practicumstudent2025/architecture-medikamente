@@ -1,0 +1,112 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="DFD Level 0 - Context" id="context-diagram">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- External Entities -->
+        <mxCell id="patient" value="Пациент" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="360" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="doctor" value="Врач" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="200" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="laboratory" value="Лаборатория" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="960" y="200" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="reception" value="Ресепшен" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="520" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="cashier" value="Кассир" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="960" y="360" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="accountant" value="Бухгалтер" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="960" y="520" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Central Process -->
+        <mxCell id="system" value="Система Медикаменте" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="400" y="280" width="360" height="200" as="geometry"/>
+        </mxCell>
+        
+        <!-- Data Flows -->
+        <mxCell id="flow1" value="Персональные данные&#xa;Запрос на запись" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="patient" target="system">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="400" as="sourcePoint"/>
+            <mxPoint x="350" y="350" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="flow2" value="Подтверждение записи" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="system" target="patient">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="500" as="sourcePoint"/>
+            <mxPoint x="350" y="450" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="flow3" value="Медицинские данные&#xa;Результаты приёма" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="doctor" target="system">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="300" as="sourcePoint"/>
+            <mxPoint x="350" y="250" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="flow4" value="Журнал записей" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="system" target="doctor">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="400" as="sourcePoint"/>
+            <mxPoint x="350" y="350" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="flow5" value="Данные для анализа" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="system" target="laboratory">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="800" y="300" as="sourcePoint"/>
+            <mxPoint x="850" y="250" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="flow6" value="Результаты анализов" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="laboratory" target="system">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="800" y="300" as="sourcePoint"/>
+            <mxPoint x="850" y="250" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="flow7" value="Регистрация пациента" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="reception" target="system">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="600" as="sourcePoint"/>
+            <mxPoint x="350" y="550" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="flow8" value="Платежная информация" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="system" target="cashier">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="800" y="400" as="sourcePoint"/>
+            <mxPoint x="850" y="350" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="flow9" value="Подтверждение оплаты" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="cashier" target="system">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="800" y="400" as="sourcePoint"/>
+            <mxPoint x="850" y="350" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="flow10" value="Финансовые данные" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="system" target="accountant">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="800" y="600" as="sourcePoint"/>
+            <mxPoint x="850" y="550" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
