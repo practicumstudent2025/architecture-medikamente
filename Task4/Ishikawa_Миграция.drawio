@@ -1,326 +1,326 @@
 <mxfile host="65bd71144e">
     <diagram name="Диаграмма Исикавы - Узкие места миграции" id="ishikawa-migration" compressed="false">
-        <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+        <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1200" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 
                 <!-- Основная линия (хребет рыбы) -->
-                <mxCell id="spine" value="" style="endArrow=block;html=1;strokeWidth=3;strokeColor=#000000;" edge="1" parent="1">
+                <mxCell id="spine" value="" style="endArrow=block;html=1;strokeWidth=4;strokeColor=#000000;" edge="1" parent="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="800" y="500" as="sourcePoint"/>
-                        <mxPoint x="200" y="500" as="targetPoint"/>
+                        <mxPoint x="900" y="600" as="sourcePoint"/>
+                        <mxPoint x="200" y="600" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 
                 <!-- Проблема (голова рыбы) -->
-                <mxCell id="problem" value="Узкие места при миграции&lt;br&gt;монолитной системы на микросервисы" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#cc0000;fontSize=14;fontStyle=1" vertex="1" parent="1">
-                    <mxGeometry x="50" y="450" width="150" height="100" as="geometry"/>
+                <mxCell id="problem" value="Узкие места при миграции&lt;br&gt;монолитной системы на микросервисы" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#cc0000;fontSize=14;fontStyle=1;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="550" width="150" height="100" as="geometry"/>
                 </mxCell>
                 
                 <!-- Категория 1: Инфраструктура -->
                 <mxCell id="infra-branch" value="" style="endArrow=block;html=1;strokeWidth=2;strokeColor=#0066CC;" edge="1" parent="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="600" y="500" as="sourcePoint"/>
-                        <mxPoint x="400" y="200" as="targetPoint"/>
+                        <mxPoint x="700" y="600" as="sourcePoint"/>
+                        <mxPoint x="500" y="250" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="infra-label" value="Инфраструктура" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1" vertex="1" parent="1">
-                    <mxGeometry x="350" y="150" width="100" height="30" as="geometry"/>
+                <mxCell id="infra-label" value="Инфраструктура" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;fontColor=#0066CC;" vertex="1" parent="1">
+                    <mxGeometry x="450" y="200" width="120" height="30" as="geometry"/>
                 </mxCell>
                 
-                <mxCell id="infra1" value="Недостаточная производительность&lt;br&gt;серверов" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="200" y="100" width="120" height="50" as="geometry"/>
+                <mxCell id="infra1" value="Недостаточная производительность серверов" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="200" y="100" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="infra1-line" value="" style="endArrow=block;html=1;strokeWidth=1;strokeColor=#0066CC;" edge="1" parent="1" source="infra1" target="infra-branch">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="260" y="125" as="sourcePoint"/>
-                        <mxPoint x="450" y="200" as="targetPoint"/>
+                        <mxPoint x="270" y="130" as="sourcePoint"/>
+                        <mxPoint x="500" y="250" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 
-                <mxCell id="infra2" value="Недостаточная пропускная&lt;br&gt;способность сети" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="350" y="100" width="120" height="50" as="geometry"/>
+                <mxCell id="infra2" value="Недостаточная пропускная способность сети" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="360" y="100" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="infra2-line" value="" style="endArrow=block;html=1;strokeWidth=1;strokeColor=#0066CC;" edge="1" parent="1" source="infra2" target="infra-branch">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="410" y="125" as="sourcePoint"/>
-                        <mxPoint x="450" y="200" as="targetPoint"/>
+                        <mxPoint x="430" y="130" as="sourcePoint"/>
+                        <mxPoint x="500" y="250" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 
-                <mxCell id="infra3" value="Отсутствие балансировщиков&lt;br&gt;нагрузки" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="500" y="100" width="120" height="50" as="geometry"/>
+                <mxCell id="infra3" value="Отсутствие балансировщиков нагрузки" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="100" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="infra3-line" value="" style="endArrow=block;html=1;strokeWidth=1;strokeColor=#0066CC;" edge="1" parent="1" source="infra3" target="infra-branch">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="560" y="125" as="sourcePoint"/>
-                        <mxPoint x="450" y="200" as="targetPoint"/>
+                        <mxPoint x="590" y="130" as="sourcePoint"/>
+                        <mxPoint x="500" y="250" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 
-                <mxCell id="infra4" value="Отсутствие мониторинга&lt;br&gt;инфраструктуры" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="650" y="100" width="120" height="50" as="geometry"/>
+                <mxCell id="infra4" value="Отсутствие мониторинга инфраструктуры" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="680" y="100" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="infra4-line" value="" style="endArrow=block;html=1;strokeWidth=1;strokeColor=#0066CC;" edge="1" parent="1" source="infra4" target="infra-branch">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="710" y="125" as="sourcePoint"/>
-                        <mxPoint x="450" y="200" as="targetPoint"/>
+                        <mxPoint x="750" y="130" as="sourcePoint"/>
+                        <mxPoint x="500" y="250" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 
                 <!-- Категория 2: Программное обеспечение -->
                 <mxCell id="software-branch" value="" style="endArrow=block;html=1;strokeWidth=2;strokeColor=#0066CC;" edge="1" parent="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="600" y="500" as="sourcePoint"/>
-                        <mxPoint x="500" y="300" as="targetPoint"/>
+                        <mxPoint x="700" y="600" as="sourcePoint"/>
+                        <mxPoint x="600" y="350" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="software-label" value="Программное обеспечение" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1" vertex="1" parent="1">
-                    <mxGeometry x="470" y="250" width="150" height="30" as="geometry"/>
+                <mxCell id="software-label" value="Программное обеспечение" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;fontColor=#0066CC;" vertex="1" parent="1">
+                    <mxGeometry x="540" y="300" width="160" height="30" as="geometry"/>
                 </mxCell>
                 
-                <mxCell id="soft1" value="Сложность декомпозиции&lt;br&gt;монолита" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="300" y="200" width="120" height="50" as="geometry"/>
+                <mxCell id="soft1" value="Сложность декомпозиции монолита" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="250" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="soft1-line" value="" style="endArrow=block;html=1;strokeWidth=1;strokeColor=#0066CC;" edge="1" parent="1" source="soft1" target="software-branch">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="360" y="225" as="sourcePoint"/>
-                        <mxPoint x="500" y="300" as="targetPoint"/>
+                        <mxPoint x="370" y="280" as="sourcePoint"/>
+                        <mxPoint x="600" y="350" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 
-                <mxCell id="soft2" value="Несовместимость версий&lt;br&gt;зависимостей" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="450" y="200" width="120" height="50" as="geometry"/>
+                <mxCell id="soft2" value="Несовместимость версий зависимостей" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="460" y="250" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="soft2-line" value="" style="endArrow=block;html=1;strokeWidth=1;strokeColor=#0066CC;" edge="1" parent="1" source="soft2" target="software-branch">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="510" y="225" as="sourcePoint"/>
-                        <mxPoint x="500" y="300" as="targetPoint"/>
+                        <mxPoint x="530" y="280" as="sourcePoint"/>
+                        <mxPoint x="600" y="350" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 
-                <mxCell id="soft3" value="Отсутствие контейнеризации" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="600" y="200" width="120" height="50" as="geometry"/>
+                <mxCell id="soft3" value="Отсутствие контейнеризации" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="620" y="250" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="soft3-line" value="" style="endArrow=block;html=1;strokeWidth=1;strokeColor=#0066CC;" edge="1" parent="1" source="soft3" target="software-branch">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="660" y="225" as="sourcePoint"/>
-                        <mxPoint x="500" y="300" as="targetPoint"/>
+                        <mxPoint x="690" y="280" as="sourcePoint"/>
+                        <mxPoint x="600" y="350" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 
-                <mxCell id="soft4" value="Недостаточное тестирование&lt;br&gt;микросервисов" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="750" y="200" width="120" height="50" as="geometry"/>
+                <mxCell id="soft4" value="Недостаточное тестирование микросервисов" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="780" y="250" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="soft4-line" value="" style="endArrow=block;html=1;strokeWidth=1;strokeColor=#0066CC;" edge="1" parent="1" source="soft4" target="software-branch">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="810" y="225" as="sourcePoint"/>
-                        <mxPoint x="500" y="300" as="targetPoint"/>
+                        <mxPoint x="850" y="280" as="sourcePoint"/>
+                        <mxPoint x="600" y="350" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 
                 <!-- Категория 3: Интеграция -->
                 <mxCell id="integration-branch" value="" style="endArrow=block;html=1;strokeWidth=2;strokeColor=#0066CC;" edge="1" parent="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="600" y="500" as="sourcePoint"/>
-                        <mxPoint x="600" y="400" as="targetPoint"/>
+                        <mxPoint x="700" y="600" as="sourcePoint"/>
+                        <mxPoint x="700" y="500" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="integration-label" value="Интеграция" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1" vertex="1" parent="1">
-                    <mxGeometry x="570" y="350" width="80" height="30" as="geometry"/>
+                <mxCell id="integration-label" value="Интеграция" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;fontColor=#0066CC;" vertex="1" parent="1">
+                    <mxGeometry x="670" y="450" width="80" height="30" as="geometry"/>
                 </mxCell>
                 
-                <mxCell id="int1" value="Сложность интеграции&lt;br&gt;с 1C" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="400" y="300" width="120" height="50" as="geometry"/>
+                <mxCell id="int1" value="Сложность интеграции с 1C" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="500" y="400" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="int1-line" value="" style="endArrow=block;html=1;strokeWidth=1;strokeColor=#0066CC;" edge="1" parent="1" source="int1" target="integration-branch">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="460" y="325" as="sourcePoint"/>
-                        <mxPoint x="600" y="400" as="targetPoint"/>
+                        <mxPoint x="570" y="430" as="sourcePoint"/>
+                        <mxPoint x="700" y="500" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 
-                <mxCell id="int2" value="Проблемы с API&lt;br&gt;лаборатории" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="550" y="300" width="120" height="50" as="geometry"/>
+                <mxCell id="int2" value="Проблемы с API лаборатории" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="660" y="400" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="int2-line" value="" style="endArrow=block;html=1;strokeWidth=1;strokeColor=#0066CC;" edge="1" parent="1" source="int2" target="integration-branch">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="610" y="325" as="sourcePoint"/>
-                        <mxPoint x="600" y="400" as="targetPoint"/>
+                        <mxPoint x="730" y="430" as="sourcePoint"/>
+                        <mxPoint x="700" y="500" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 
-                <mxCell id="int3" value="Несовместимость форматов&lt;br&gt;данных" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="700" y="300" width="120" height="50" as="geometry"/>
+                <mxCell id="int3" value="Несовместимость форматов данных" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="820" y="400" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="int3-line" value="" style="endArrow=block;html=1;strokeWidth=1;strokeColor=#0066CC;" edge="1" parent="1" source="int3" target="integration-branch">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="760" y="325" as="sourcePoint"/>
-                        <mxPoint x="600" y="400" as="targetPoint"/>
+                        <mxPoint x="890" y="430" as="sourcePoint"/>
+                        <mxPoint x="700" y="500" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 
-                <mxCell id="int4" value="Отсутствие API Gateway&lt;br&gt;на старте" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="850" y="300" width="120" height="50" as="geometry"/>
+                <mxCell id="int4" value="Отсутствие API Gateway на старте" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="980" y="400" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="int4-line" value="" style="endArrow=block;html=1;strokeWidth=1;strokeColor=#0066CC;" edge="1" parent="1" source="int4" target="integration-branch">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="910" y="325" as="sourcePoint"/>
-                        <mxPoint x="600" y="400" as="targetPoint"/>
+                        <mxPoint x="1050" y="430" as="sourcePoint"/>
+                        <mxPoint x="700" y="500" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 
                 <!-- Категория 4: Персонал -->
                 <mxCell id="personnel-branch" value="" style="endArrow=block;html=1;strokeWidth=2;strokeColor=#0066CC;" edge="1" parent="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="600" y="500" as="sourcePoint"/>
-                        <mxPoint x="600" y="600" as="targetPoint"/>
+                        <mxPoint x="700" y="600" as="sourcePoint"/>
+                        <mxPoint x="700" y="700" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="personnel-label" value="Персонал" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1" vertex="1" parent="1">
-                    <mxGeometry x="570" y="630" width="80" height="30" as="geometry"/>
+                <mxCell id="personnel-label" value="Персонал" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;fontColor=#0066CC;" vertex="1" parent="1">
+                    <mxGeometry x="670" y="730" width="80" height="30" as="geometry"/>
                 </mxCell>
                 
-                <mxCell id="pers1" value="Недостаток знаний&lt;br&gt;микросервисов" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="400" y="700" width="120" height="50" as="geometry"/>
+                <mxCell id="pers1" value="Недостаток знаний микросервисов" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="500" y="800" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="pers1-line" value="" style="endArrow=block;html=1;strokeWidth=1;strokeColor=#0066CC;" edge="1" parent="1" source="pers1" target="personnel-branch">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="460" y="725" as="sourcePoint"/>
-                        <mxPoint x="600" y="600" as="targetPoint"/>
+                        <mxPoint x="570" y="830" as="sourcePoint"/>
+                        <mxPoint x="700" y="700" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 
-                <mxCell id="pers2" value="Сопротивление изменениям" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="550" y="700" width="120" height="50" as="geometry"/>
+                <mxCell id="pers2" value="Сопротивление изменениям" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="660" y="800" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="pers2-line" value="" style="endArrow=block;html=1;strokeWidth=1;strokeColor=#0066CC;" edge="1" parent="1" source="pers2" target="personnel-branch">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="610" y="725" as="sourcePoint"/>
-                        <mxPoint x="600" y="600" as="targetPoint"/>
+                        <mxPoint x="730" y="830" as="sourcePoint"/>
+                        <mxPoint x="700" y="700" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 
-                <mxCell id="pers3" value="Недостаток DevOps&lt;br&gt;навыков" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="700" y="700" width="120" height="50" as="geometry"/>
+                <mxCell id="pers3" value="Недостаток DevOps навыков" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="820" y="800" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="pers3-line" value="" style="endArrow=block;html=1;strokeWidth=1;strokeColor=#0066CC;" edge="1" parent="1" source="pers3" target="personnel-branch">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="760" y="725" as="sourcePoint"/>
-                        <mxPoint x="600" y="600" as="targetPoint"/>
+                        <mxPoint x="890" y="830" as="sourcePoint"/>
+                        <mxPoint x="700" y="700" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 
-                <mxCell id="pers4" value="Отсутствие опыта&lt;br&gt;работы с Kubernetes" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="850" y="700" width="120" height="50" as="geometry"/>
+                <mxCell id="pers4" value="Отсутствие опыта работы с Kubernetes" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="980" y="800" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="pers4-line" value="" style="endArrow=block;html=1;strokeWidth=1;strokeColor=#0066CC;" edge="1" parent="1" source="pers4" target="personnel-branch">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="910" y="725" as="sourcePoint"/>
-                        <mxPoint x="600" y="600" as="targetPoint"/>
+                        <mxPoint x="1050" y="830" as="sourcePoint"/>
+                        <mxPoint x="700" y="700" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 
                 <!-- Категория 5: Процессы -->
                 <mxCell id="process-branch" value="" style="endArrow=block;html=1;strokeWidth=2;strokeColor=#0066CC;" edge="1" parent="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="600" y="500" as="sourcePoint"/>
-                        <mxPoint x="700" y="300" as="targetPoint"/>
+                        <mxPoint x="700" y="600" as="sourcePoint"/>
+                        <mxPoint x="800" y="350" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="process-label" value="Процессы" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1" vertex="1" parent="1">
-                    <mxGeometry x="680" y="250" width="80" height="30" as="geometry"/>
+                <mxCell id="process-label" value="Процессы" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;fontColor=#0066CC;" vertex="1" parent="1">
+                    <mxGeometry x="780" y="300" width="80" height="30" as="geometry"/>
                 </mxCell>
                 
-                <mxCell id="proc1" value="Отсутствие CI/CD&lt;br&gt;процессов" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="900" y="200" width="120" height="50" as="geometry"/>
+                <mxCell id="proc1" value="Отсутствие CI/CD процессов" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="1000" y="250" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="proc1-line" value="" style="endArrow=block;html=1;strokeWidth=1;strokeColor=#0066CC;" edge="1" parent="1" source="proc1" target="process-branch">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="960" y="225" as="sourcePoint"/>
-                        <mxPoint x="700" y="300" as="targetPoint"/>
+                        <mxPoint x="1070" y="280" as="sourcePoint"/>
+                        <mxPoint x="800" y="350" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 
-                <mxCell id="proc2" value="Недостаточное&lt;br&gt;планирование миграции" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="1050" y="200" width="120" height="50" as="geometry"/>
+                <mxCell id="proc2" value="Недостаточное планирование миграции" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="1160" y="250" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="proc2-line" value="" style="endArrow=block;html=1;strokeWidth=1;strokeColor=#0066CC;" edge="1" parent="1" source="proc2" target="process-branch">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="1110" y="225" as="sourcePoint"/>
-                        <mxPoint x="700" y="300" as="targetPoint"/>
+                        <mxPoint x="1230" y="280" as="sourcePoint"/>
+                        <mxPoint x="800" y="350" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 
-                <mxCell id="proc3" value="Отсутствие стратегии&lt;br&gt;отката" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="1200" y="200" width="120" height="50" as="geometry"/>
+                <mxCell id="proc3" value="Отсутствие стратегии отката" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="1320" y="250" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="proc3-line" value="" style="endArrow=block;html=1;strokeWidth=1;strokeColor=#0066CC;" edge="1" parent="1" source="proc3" target="process-branch">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="1260" y="225" as="sourcePoint"/>
-                        <mxPoint x="700" y="300" as="targetPoint"/>
+                        <mxPoint x="1390" y="280" as="sourcePoint"/>
+                        <mxPoint x="800" y="350" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 
-                <mxCell id="proc4" value="Недостаточное&lt;br&gt;тестирование" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="1350" y="200" width="120" height="50" as="geometry"/>
+                <mxCell id="proc4" value="Недостаточное тестирование" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="1480" y="250" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="proc4-line" value="" style="endArrow=block;html=1;strokeWidth=1;strokeColor=#0066CC;" edge="1" parent="1" source="proc4" target="process-branch">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="1410" y="225" as="sourcePoint"/>
-                        <mxPoint x="700" y="300" as="targetPoint"/>
+                        <mxPoint x="1550" y="280" as="sourcePoint"/>
+                        <mxPoint x="800" y="350" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 
                 <!-- Категория 6: Данные -->
                 <mxCell id="data-branch" value="" style="endArrow=block;html=1;strokeWidth=2;strokeColor=#0066CC;" edge="1" parent="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="600" y="500" as="sourcePoint"/>
-                        <mxPoint x="800" y="600" as="targetPoint"/>
+                        <mxPoint x="700" y="600" as="sourcePoint"/>
+                        <mxPoint x="900" y="700" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="data-label" value="Данные" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1" vertex="1" parent="1">
-                    <mxGeometry x="780" y="630" width="80" height="30" as="geometry"/>
+                <mxCell id="data-label" value="Данные" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;fontColor=#0066CC;" vertex="1" parent="1">
+                    <mxGeometry x="880" y="730" width="80" height="30" as="geometry"/>
                 </mxCell>
                 
-                <mxCell id="data1" value="Сложность миграции&lt;br&gt;данных из Excel" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="1000" y="700" width="120" height="50" as="geometry"/>
+                <mxCell id="data1" value="Сложность миграции данных из Excel" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="1100" y="800" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="data1-line" value="" style="endArrow=block;html=1;strokeWidth=1;strokeColor=#0066CC;" edge="1" parent="1" source="data1" target="data-branch">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="1060" y="725" as="sourcePoint"/>
-                        <mxPoint x="800" y="600" as="targetPoint"/>
+                        <mxPoint x="1170" y="830" as="sourcePoint"/>
+                        <mxPoint x="900" y="700" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 
-                <mxCell id="data2" value="Потеря данных при&lt;br&gt;миграции" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="1150" y="700" width="120" height="50" as="geometry"/>
+                <mxCell id="data2" value="Потеря данных при миграции" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="1260" y="800" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="data2-line" value="" style="endArrow=block;html=1;strokeWidth=1;strokeColor=#0066CC;" edge="1" parent="1" source="data2" target="data-branch">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="1210" y="725" as="sourcePoint"/>
-                        <mxPoint x="800" y="600" as="targetPoint"/>
+                        <mxPoint x="1330" y="830" as="sourcePoint"/>
+                        <mxPoint x="900" y="700" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 
-                <mxCell id="data3" value="Несовместимость схем&lt;br&gt;БД" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="1300" y="700" width="120" height="50" as="geometry"/>
+                <mxCell id="data3" value="Несовместимость схем БД" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="1420" y="800" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="data3-line" value="" style="endArrow=block;html=1;strokeWidth=1;strokeColor=#0066CC;" edge="1" parent="1" source="data3" target="data-branch">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="1360" y="725" as="sourcePoint"/>
-                        <mxPoint x="800" y="600" as="targetPoint"/>
+                        <mxPoint x="1490" y="830" as="sourcePoint"/>
+                        <mxPoint x="900" y="700" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 
-                <mxCell id="data4" value="Длительное время&lt;br&gt;миграции данных" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="1450" y="700" width="120" height="50" as="geometry"/>
+                <mxCell id="data4" value="Длительное время миграции данных" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="1580" y="800" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="data4-line" value="" style="endArrow=block;html=1;strokeWidth=1;strokeColor=#0066CC;" edge="1" parent="1" source="data4" target="data-branch">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="1510" y="725" as="sourcePoint"/>
-                        <mxPoint x="800" y="600" as="targetPoint"/>
+                        <mxPoint x="1650" y="830" as="sourcePoint"/>
+                        <mxPoint x="900" y="700" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 
