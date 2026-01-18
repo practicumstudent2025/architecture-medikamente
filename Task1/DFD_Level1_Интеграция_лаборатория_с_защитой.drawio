@@ -1,120 +1,103 @@
-<mxfile host="app.diagrams.net">
+<mxfile host="65bd71144e">
     <diagram name="DFD Level 1 - Интеграция с лабораторией (с защитой)" id="laboratory-secure-dfd" compressed="false">
-        <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+        <mxGraphModel dx="569" dy="509" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-
-                <mxCell id="doctor" value="Врач" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="40" y="300" width="100" height="50" as="geometry"/>
-                    </mxCell>
-
-                <mxCell id="laboratory" value="Лаборатория" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="1000" y="300" width="100" height="50" as="geometry"/>
-                    </mxCell>
-
-                <mxCell id="p1" value="1.0&#xa;Назначение&#xa;анализов&#xa;[RBAC]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                <mxCell id="doctor" value="Врач" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="10" y="300" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="laboratory" value="Лаборатория" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="1050" y="300" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="p1" value="1.0&#10;Назначение&#10;анализов&#10;[RBAC]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
                     <mxGeometry x="240" y="280" width="140" height="90" as="geometry"/>
-                    </mxCell>
-
-                <mxCell id="p2" value="2.0&#xa;Обезличивание&#xa;данных&#xa;[Data Minimization]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-                    <mxGeometry x="440" y="280" width="140" height="90" as="geometry"/>
-                    </mxCell>
-
-                <mxCell id="p3" value="3.0&#xa;API Gateway&#xa;[mTLS, DLP]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-                    <mxGeometry x="640" y="280" width="140" height="90" as="geometry"/>
-                    </mxCell>
-
-                <mxCell id="p4" value="4.0&#xa;Валидация и&#xa;расшифровка&#xa;[TLS 1.3]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-                    <mxGeometry x="640" y="480" width="140" height="90" as="geometry"/>
-                    </mxCell>
-
-                <mxCell id="p5" value="5.0&#xa;Сохранение результатов&#xa;[Шифрование, Теги]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-                    <mxGeometry x="440" y="480" width="140" height="90" as="geometry"/>
-                    </mxCell>
-
-                <mxCell id="s1" value="Аудит передачи&#xa;[Логирование]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;" vertex="1" parent="1">
-                    <mxGeometry x="640" y="420" width="140" height="50" as="geometry"/>
-                    </mxCell>
-
-                <mxCell id="d1" value="D1&#xa;Медицинские карты&#xa;[AES-256]&#xa;[Теги: Medical]" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="240" y="440" width="140" height="80" as="geometry"/>
-                    </mxCell>
-
-                <mxCell id="d2" value="D2&#xa;Реестры анализов&#xa;[AES-256]&#xa;[Теги: Medical]" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="440" y="640" width="140" height="80" as="geometry"/>
-                    </mxCell>
-
-                <mxCell id="f1" value="Назначение анализов" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="doctor" target="p1">
+                </mxCell>
+                <mxCell id="p2" value="2.0&#10;Обезличивание&#10;данных&#10;[Data Minimization]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="280" width="140" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3" value="3.0&#10;API Gateway&#10;[mTLS, DLP]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="740" y="280" width="140" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="p4" value="4.0&#10;Валидация и&#10;расшифровка&#10;[TLS 1.3]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="740" y="480" width="140" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="p5" value="5.0&#10;Сохранение результатов&#10;[Шифрование, Теги]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="480" width="140" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="s1" value="Аудит передачи&#10;[Логирование]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;" parent="1" vertex="1">
+                    <mxGeometry x="740" y="420" width="140" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="d1" value="D1&#10;Медицинские карты&#10;[AES-256]&#10;[Теги: Medical]" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="485" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="d2" value="D2&#10;Реестры анализов&#10;[AES-256]&#10;[Теги: Medical]" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="640" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="f1" value="Назначение &lt;br&gt;анализов" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="doctor" target="p1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="200" y="400" as="sourcePoint"/>
-            <mxPoint x="250" y="350" as="targetPoint"/>
-          </mxGeometry>
-                    </mxCell>
-
-                <mxCell id="f2" value="Данные пациента" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d1" target="p1">
+                        <mxPoint x="200" y="400" as="sourcePoint"/>
+                        <mxPoint x="250" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="f2" value="Данные &lt;br&gt;пациента" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="d1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="300" y="500" as="sourcePoint"/>
-            <mxPoint x="350" y="450" as="targetPoint"/>
-          </mxGeometry>
-                    </mxCell>
-
-                <mxCell id="f3" value="Запрос на анализы" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="p1" target="p2">
+                        <mxPoint x="310" y="470" as="sourcePoint"/>
+                        <mxPoint x="310" y="370" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="f3" value="Запрос &lt;br&gt;на анализы" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="p1" target="p2" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="400" y="400" as="sourcePoint"/>
-            <mxPoint x="450" y="350" as="targetPoint"/>
-          </mxGeometry>
-                    </mxCell>
-
-                <mxCell id="f4" value="Обезличенные данные&#xa;[Минимум PII]" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#d79b00;strokeWidth=2;" edge="1" parent="1" source="p2" target="p3">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="f4" value="Обезличенные&lt;br&gt;&amp;nbsp;данные&lt;br&gt;[Минимум PII]" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#d79b00;strokeWidth=2;" parent="1" source="p2" target="p3" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="600" y="400" as="sourcePoint"/>
-            <mxPoint x="650" y="350" as="targetPoint"/>
-          </mxGeometry>
-                    </mxCell>
-
-                <mxCell id="f5" value="Данные для анализа&#xa;[mTLS, AES-256]" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#d79b00;strokeWidth=2;" edge="1" parent="1" source="p3" target="laboratory">
+                        <mxPoint x="600" y="400" as="sourcePoint"/>
+                        <mxPoint x="650" y="350" as="targetPoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="f5" value="Данные для анализа&#10;[mTLS, AES-256]" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#d79b00;strokeWidth=2;" parent="1" source="p3" target="laboratory" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="800" y="400" as="sourcePoint"/>
-            <mxPoint x="850" y="350" as="targetPoint"/>
-          </mxGeometry>
-                    </mxCell>
-
-                <mxCell id="f6" value="Результаты анализов&#xa;[mTLS, AES-256]" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#d79b00;strokeWidth=2;" edge="1" parent="1" source="laboratory" target="p4">
+                        <mxPoint x="800" y="400" as="sourcePoint"/>
+                        <mxPoint x="850" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="f6" value="Результаты анализов&#10;[mTLS, AES-256]" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#d79b00;strokeWidth=2;" parent="1" source="laboratory" target="p4" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="800" y="400" as="sourcePoint"/>
-            <mxPoint x="850" y="350" as="targetPoint"/>
-          </mxGeometry>
-                    </mxCell>
-
-                <mxCell id="f7" value="Обработанные результаты" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="p4" target="p5">
+                        <mxPoint x="800" y="400" as="sourcePoint"/>
+                        <mxPoint x="850" y="350" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1100" y="525"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="f7" value="Обработанные &lt;br&gt;результаты" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="p4" target="p5" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="500" y="600" as="sourcePoint"/>
-            <mxPoint x="550" y="550" as="targetPoint"/>
-          </mxGeometry>
-                    </mxCell>
-
-                <mxCell id="f8" value="Результаты&#xa;[AES-256]" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#d79b00;strokeWidth=2;" edge="1" parent="1" source="p5" target="d2">
+                        <mxPoint x="500" y="600" as="sourcePoint"/>
+                        <mxPoint x="550" y="550" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="f8" value="Результаты&#10;[AES-256]" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#d79b00;strokeWidth=2;" parent="1" source="p5" target="d2" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="500" y="700" as="sourcePoint"/>
-            <mxPoint x="550" y="650" as="targetPoint"/>
-          </mxGeometry>
-                    </mxCell>
-
-                <mxCell id="f9" value="Результаты&#xa;[AES-256]" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#d79b00;strokeWidth=2;" edge="1" parent="1" source="p5" target="d1">
+                        <mxPoint x="500" y="700" as="sourcePoint"/>
+                        <mxPoint x="550" y="650" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="f9" value="Результаты&#10;[AES-256]" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#d79b00;strokeWidth=2;entryPerimeter=0;" parent="1" source="p5" target="d1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="300" y="600" as="sourcePoint"/>
-            <mxPoint x="350" y="550" as="targetPoint"/>
-          </mxGeometry>
-                    </mxCell>
-
-                <mxCell id="f10" value="Лог передачи" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#b85450;strokeWidth=2;dashed=1;" edge="1" parent="1" source="p3" target="s1">
+                        <mxPoint x="300" y="600" as="sourcePoint"/>
+                        <mxPoint x="350" y="550" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="f10" value="Лог передачи" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#b85450;strokeWidth=2;dashed=1;" parent="1" source="p3" target="s1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="700" y="400" as="sourcePoint"/>
-            <mxPoint x="750" y="350" as="targetPoint"/>
-          </mxGeometry>
-                    </mxCell>
-
+                        <mxPoint x="700" y="400" as="sourcePoint"/>
+                        <mxPoint x="750" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
