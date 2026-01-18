@@ -5,33 +5,30 @@
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
 
-                <!-- External Entities -->
-                <mxCell id="patient" value="Пациент" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#6C6477;strokeColor=#4D4D4D;" parent="1" vertex="1">
-                    <mxGeometry x="80" y="200" width="100" height="180" as="geometry"/>
+                <mxCell id="patient" value="Пациент" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6C6477;strokeColor=#4D4D4D;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="200" width="120" height="60" as="geometry"/>
                 </mxCell>
 
-                <mxCell id="doctor" value="Врач" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#083F75;strokeColor=#06315C;" parent="1" vertex="1">
-                    <mxGeometry x="80" y="500" width="100" height="180" as="geometry"/>
+                <mxCell id="doctor" value="Врач" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#083F75;strokeColor=#06315C;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="500" width="120" height="60" as="geometry"/>
                 </mxCell>
 
-                <mxCell id="reception" value="Ресепшен" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#083F75;strokeColor=#06315C;" parent="1" vertex="1">
-                    <mxGeometry x="80" y="800" width="100" height="180" as="geometry"/>
+                <mxCell id="reception" value="Ресепшен" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#083F75;strokeColor=#06315C;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="800" width="120" height="60" as="geometry"/>
                 </mxCell>
 
-                <mxCell id="laboratory" value="Лаборатория" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#6C6477;strokeColor=#4D4D4D;" parent="1" vertex="1">
-                    <mxGeometry x="1200" y="200" width="100" height="180" as="geometry"/>
+                <mxCell id="laboratory" value="Лаборатория" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6C6477;strokeColor=#4D4D4D;" parent="1" vertex="1">
+                    <mxGeometry x="1200" y="200" width="120" height="60" as="geometry"/>
                 </mxCell>
 
-                <mxCell id="payment-gateway" value="Платёжный шлюз" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#6C6477;strokeColor=#4D4D4D;" parent="1" vertex="1">
-                    <mxGeometry x="1200" y="500" width="100" height="180" as="geometry"/>
+                <mxCell id="payment-gateway" value="Платёжный шлюз" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6C6477;strokeColor=#4D4D4D;" parent="1" vertex="1">
+                    <mxGeometry x="1200" y="500" width="120" height="60" as="geometry"/>
                 </mxCell>
 
-                <!-- System Boundary -->
                 <mxCell id="system-boundary" value="Система Медикаменте (To-Be)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;dashPattern=8 4;arcSize=20;" parent="1" vertex="1">
                     <mxGeometry x="250" y="100" width="900" height="900" as="geometry"/>
                 </mxCell>
 
-                <!-- User-facing Applications -->
                 <mxCell id="mobile-app" value="Мобильное приложение&#xa;для пациентов" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
                     <mxGeometry x="300" y="200" width="180" height="80" as="geometry"/>
                 </mxCell>
@@ -48,7 +45,6 @@
                     <mxGeometry x="520" y="320" width="180" height="80" as="geometry"/>
                 </mxCell>
 
-                <!-- Privacy & Security Layer -->
                 <mxCell id="privacy-layer" value="Privacy &amp; Security Layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;dashed=1;dashPattern=8 4;" parent="1" vertex="1">
                     <mxGeometry x="280" y="450" width="840" height="200" as="geometry"/>
                 </mxCell>
@@ -73,7 +69,6 @@
                     <mxGeometry x="940" y="480" width="140" height="80" as="geometry"/>
                 </mxCell>
 
-                <!-- Business Logic Layer -->
                 <mxCell id="crm" value="CRM System" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
                     <mxGeometry x="300" y="700" width="140" height="80" as="geometry"/>
                 </mxCell>
@@ -94,7 +89,6 @@
                     <mxGeometry x="940" y="700" width="140" height="80" as="geometry"/>
                 </mxCell>
 
-                <!-- Analytics Layer with Privacy -->
                 <mxCell id="analytics-layer" value="Analytics Layer (Privacy by Design)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;dashPattern=8 4;" parent="1" vertex="1">
                     <mxGeometry x="280" y="820" width="840" height="120" as="geometry"/>
                 </mxCell>
@@ -115,7 +109,6 @@
                     <mxGeometry x="840" y="850" width="160" height="70" as="geometry"/>
                 </mxCell>
 
-                <!-- Data Storage Layer -->
                 <mxCell id="data-storage" value="Data Storage Layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;dashPattern=8 4;" parent="1" vertex="1">
                     <mxGeometry x="280" y="980" width="840" height="100" as="geometry"/>
                 </mxCell>
@@ -136,7 +129,6 @@
                     <mxGeometry x="780" y="1000" width="140" height="60" as="geometry"/>
                 </mxCell>
 
-                <!-- Flows from External Entities -->
                 <mxCell id="flow1" value="Запись, просмотр данных" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="patient" target="mobile-app" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="200" y="300" as="sourcePoint"/>
@@ -172,7 +164,6 @@
                     </mxGeometry>
                 </mxCell>
 
-                <!-- Internal flows -->
                 <mxCell id="flow6" value="API запросы" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mobile-app" target="api-gateway" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="400" y="300" as="sourcePoint"/>
