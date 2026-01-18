@@ -47,7 +47,7 @@
                     <mxGeometry x="1270" y="250" width="100" height="100" as="geometry"/>
                 </mxCell>
                 <mxCell id="audit-monitoring" value="Audit &amp; Monitoring&#10;(ELK Stack, Splunk)&#10;SIEM, DLP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="845" y="110" width="120" height="100" as="geometry"/>
+                    <mxGeometry x="845" y="60" width="120" height="100" as="geometry"/>
                 </mxCell>
                 <mxCell id="crm" value="CRM System" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
                     <mxGeometry x="510" y="560" width="120" height="80" as="geometry"/>
@@ -68,7 +68,7 @@
                     <mxGeometry x="520" y="670" width="860" height="180" as="geometry"/>
                 </mxCell>
                 <mxCell id="anonymization-service" value="Anonymization Service&#10;Автоматическое обезличивание" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-                    <mxGeometry x="610" y="721" width="140" height="99" as="geometry"/>
+                    <mxGeometry x="540" y="721" width="220" height="99" as="geometry"/>
                 </mxCell>
                 <mxCell id="data-lake" value="Data Lake&#10;(ClickHouse)&#10;Обезличенные данные" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
                     <mxGeometry x="845" y="770" width="295" height="50" as="geometry"/>
@@ -123,8 +123,8 @@
                 </mxCell>
                 <mxCell id="flow4" value="Результаты анализов&#10;(mTLS, зашифровано)" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;" edge="1" parent="1" source="laboratory" target="laboratory-integration">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="1200" y="300" as="sourcePoint"/>
-                        <mxPoint x="1080" y="490" as="targetPoint"/>
+                        <mxPoint x="1520" y="890" as="sourcePoint"/>
+                        <mxPoint x="1260" y="890" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="flow5" value="Обработка &lt;br&gt;платежей" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;labelBackgroundColor=none;" edge="1" parent="1" source="payment-gateway" target="payment-service">
@@ -134,10 +134,10 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="flow6" value="API &lt;br&gt;запросы" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;labelBackgroundColor=none;" edge="1" parent="1" source="mobile-app">
+                <mxCell id="flow6" value="API &lt;br&gt;запросы" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;" edge="1" parent="1" source="mobile-app" target="api-gateway">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="570" y="180" as="sourcePoint"/>
-                        <mxPoint x="570" y="290" as="targetPoint"/>
+                        <mxPoint x="420" y="250" as="sourcePoint"/>
+                        <mxPoint x="570" y="300" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="flow16" value="API запросы" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;labelBackgroundColor=none;" edge="1" parent="1" source="client-portal" target="api-gateway">
@@ -217,11 +217,10 @@
                         <mxPoint x="1080" y="300" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="flow11" value="Бизнес-логика" style="endArrow=block;endFill=1;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;" edge="1" parent="1" target="crm">
-                    <mxGeometry x="0.3839" y="5" width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="610" y="350" as="sourcePoint"/>
-                        <mxPoint x="580" y="450" as="targetPoint"/>
-                        <mxPoint y="1" as="offset"/>
+                <mxCell id="flow11" value="Бизнес-логика" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;" edge="1" parent="1" source="api-gateway" target="crm">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="620" y="350" as="sourcePoint"/>
+                        <mxPoint x="570" y="560" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="flow22" value="Бизнес-логика" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;" edge="1" parent="1" source="api-gateway" target="appointment-service">
@@ -256,88 +255,89 @@
                         <mxPoint x="920" y="490" as="sourcePoint"/>
                         <mxPoint x="940" y="300" as="targetPoint"/>
                         <Array as="points">
-                            <mxPoint x="1320" y="642"/>
+                            <mxPoint x="1320" y="620"/>
                         </Array>
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="flow20" value="Аудит доступа к данным" style="endArrow=block;endFill=1;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;" edge="1" parent="1" target="audit-monitoring">
-                    <mxGeometry x="0.706" y="-11" width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="960" y="622" as="sourcePoint"/>
-                        <mxPoint x="1080" y="300" as="targetPoint"/>
+                <mxCell id="flow20" value="Аудит доступа к данным" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;labelBackgroundColor=none;" edge="1" parent="1" source="medical-records-service" target="audit-monitoring">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="880" y="560" as="sourcePoint"/>
+                        <mxPoint x="905" y="210" as="targetPoint"/>
                         <Array as="points">
-                            <mxPoint x="1040" y="622"/>
-                            <mxPoint x="1040" y="160"/>
+                            <mxPoint x="880" y="520"/>
+                            <mxPoint x="840" y="520"/>
+                            <mxPoint x="840" y="190"/>
+                            <mxPoint x="875" y="190"/>
                         </Array>
-                        <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="flow12" value="Обезличивание" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;" edge="1" parent="1" source="medical-records-service" target="anonymization-service">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="860" y="632" as="sourcePoint"/>
-                        <mxPoint x="610" y="747" as="targetPoint"/>
+                        <mxPoint x="880" y="640" as="sourcePoint"/>
+                        <mxPoint x="715" y="721" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="flow34" value="Обезличивание" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;" edge="1" parent="1" source="crm" target="anonymization-service">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="580" y="632" as="sourcePoint"/>
-                        <mxPoint x="610" y="747" as="targetPoint"/>
+                        <mxPoint x="570" y="640" as="sourcePoint"/>
+                        <mxPoint x="645" y="721" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="flow35" value="Обезличивание" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.683;entryY=0.019;entryDx=0;entryDy=0;labelBackgroundColor=none;entryPerimeter=0;" edge="1" parent="1" source="appointment-service" target="anonymization-service">
+                <mxCell id="flow35" value="Обезличивание" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.683;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;entryPerimeter=0;" edge="1" parent="1" source="appointment-service" target="anonymization-service">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="720" y="632" as="sourcePoint"/>
-                        <mxPoint x="610" y="747" as="targetPoint"/>
+                        <mxPoint x="720" y="640" as="sourcePoint"/>
+                        <mxPoint x="705" y="721" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="flow13" value="Обезличенные &lt;br&gt;данные" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;" edge="1" parent="1" source="anonymization-service" target="data-lake">
+                <mxCell id="flow13" value="Обезличенные &lt;br&gt;данные" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;" edge="1" parent="1" source="anonymization-service" target="data-lake">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="680" y="747" as="sourcePoint"/>
-                        <mxPoint x="700" y="747" as="targetPoint"/>
+                        <mxPoint x="750" y="770" as="sourcePoint"/>
+                        <mxPoint x="845" y="795" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="flow28" value="Чтение данных" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;labelBackgroundColor=none;" edge="1" parent="1" source="data-lake" target="bi-service">
+                <mxCell id="flow28" value="Чтение данных" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;labelBackgroundColor=none;" edge="1" parent="1" source="data-lake" target="bi-service">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="840" y="747" as="sourcePoint"/>
-                        <mxPoint x="860" y="747" as="targetPoint"/>
+                        <mxPoint x="992" y="770" as="sourcePoint"/>
+                        <mxPoint x="992" y="750" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="flow29" value="Чтение &lt;br&gt;данных" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;" edge="1" parent="1" source="data-lake" target="ml-service">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="840" y="747" as="sourcePoint"/>
-                        <mxPoint x="1020" y="747" as="targetPoint"/>
+                        <mxPoint x="1140" y="795" as="sourcePoint"/>
+                        <mxPoint x="1220" y="755" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1140" y="750"/>
+                            <mxPoint x="1220" y="750"/>
+                        </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="flow14" value="Хранение" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.23;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;" edge="1" parent="1" source="medical-records-service" target="data-storage">
-                    <mxGeometry x="0.6796" y="1" width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="860" y="632" as="sourcePoint"/>
-                        <mxPoint x="610" y="872" as="targetPoint"/>
-                        <mxPoint x="1" as="offset"/>
+                <mxCell id="flow14" value="Хранение" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;" edge="1" parent="1" source="medical-records-service" target="data-storage">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="880" y="640" as="sourcePoint"/>
+                        <mxPoint x="880" y="913" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="flow30" value="Хранение" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;labelBackgroundColor=none;" edge="1" parent="1" source="crm">
-                    <mxGeometry x="0.6993" y="-4" width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="580" y="632" as="sourcePoint"/>
-                        <mxPoint x="610" y="910" as="targetPoint"/>
-                        <mxPoint as="offset"/>
+                <mxCell id="flow30" value="Хранение" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;" edge="1" parent="1" source="crm" target="data-storage">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="570" y="640" as="sourcePoint"/>
+                        <mxPoint x="570" y="913" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="flow31" value="Хранение" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.169;entryY=-0.013;entryDx=0;entryDy=0;labelBackgroundColor=none;entryPerimeter=0;" edge="1" parent="1" source="appointment-service" target="data-storage">
-                    <mxGeometry x="0.6033" y="9" width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="720" y="632" as="sourcePoint"/>
-                        <mxPoint x="610" y="872" as="targetPoint"/>
-                        <mxPoint as="offset"/>
+                <mxCell id="flow31" value="Хранение" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;" edge="1" parent="1" source="appointment-service" target="data-storage">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="720" y="640" as="sourcePoint"/>
+                        <mxPoint x="720" y="913" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="flow32" value="Хранение" style="endArrow=block;endFill=1;html=1;rounded=0;labelBackgroundColor=none;entryX=0.679;entryY=-0.01;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="data-storage">
-                    <mxGeometry x="-0.0753" y="1" width="50" height="50" relative="1" as="geometry">
+                <mxCell id="flow32" value="Хранение" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.679;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;entryPerimeter=0;" edge="1" parent="1" source="payment-service" target="data-storage">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="905" y="500" as="sourcePoint"/>
-                        <mxPoint x="1020" y="910" as="targetPoint"/>
+                        <mxPoint x="980" y="913" as="targetPoint"/>
                         <Array as="points">
                             <mxPoint x="905" y="540"/>
                             <mxPoint x="980" y="540"/>
                         </Array>
-                        <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="flow36" value="Шифрование данных" style="endArrow=block;endFill=1;html=1;rounded=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;labelBackgroundColor=none;exitX=1.017;exitY=0.613;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="payment-service" target="encryption-service">
@@ -368,14 +368,13 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="flow33" value="Хранение" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.868;entryY=-0.022;entryDx=0;entryDy=0;labelBackgroundColor=none;entryPerimeter=0;" edge="1" parent="1" source="laboratory-integration" target="data-storage">
-                    <mxGeometry x="0.0215" y="-10" width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="1140" y="632" as="sourcePoint"/>
-                        <mxPoint x="610" y="872" as="targetPoint"/>
+                <mxCell id="flow33" value="Хранение" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;" edge="1" parent="1" source="laboratory-integration" target="data-storage">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1260" y="890" as="sourcePoint"/>
+                        <mxPoint x="1200" y="981" as="targetPoint"/>
                         <Array as="points">
-                            <mxPoint x="1110" y="890"/>
+                            <mxPoint x="1200" y="890"/>
                         </Array>
-                        <mxPoint x="-1" as="offset"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="6" value="" style="endArrow=none;endFill=1;html=1;rounded=0;labelBackgroundColor=none;" edge="1" parent="1">
