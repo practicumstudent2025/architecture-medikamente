@@ -19,7 +19,7 @@
                 <mxCell id="payment-gateway" value="Платёжный шлюз" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6C6477;strokeColor=#4D4D4D;" parent="1" vertex="1">
                     <mxGeometry x="1520" y="740" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="system-boundary" value="Система Медикаменте (To-Be)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;dashPattern=8 4;arcSize=20;" parent="1" vertex="1">
+                <mxCell id="system-boundary" value="Система Медикаменте (To-Be)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;dashPattern=8 4;arcSize=19;" parent="1" vertex="1">
                     <mxGeometry x="250" y="40" width="900" height="960" as="geometry"/>
                 </mxCell>
                 <mxCell id="mobile-app" value="Мобильное приложение&#10;для пациентов" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
@@ -41,16 +41,16 @@
                     <mxGeometry x="530" y="480" width="140" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="iam" value="IAM Service&#10;(Azure AD)&#10;RBAC/ABAC, MFA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
-                    <mxGeometry x="705" y="480" width="110" height="80" as="geometry"/>
+                    <mxGeometry x="790" y="500" width="110" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="data-classification" value="Data Classification&#10;&amp; Tagging&#10;(Apache Atlas)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
-                    <mxGeometry x="850" y="480" width="140" height="80" as="geometry"/>
+                    <mxGeometry x="1080" y="490" width="140" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="encryption-service" value="Encryption Service&#10;(HashiCorp Vault)&#10;AES-256, Key Management" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
-                    <mxGeometry x="1010" y="480" width="140" height="80" as="geometry"/>
+                    <mxGeometry x="1270" y="500" width="140" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="audit-monitoring" value="Audit &amp; Monitoring&#10;(ELK Stack, Splunk)&#10;SIEM, DLP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
-                    <mxGeometry x="1340" y="500" width="140" height="80" as="geometry"/>
+                    <mxGeometry x="1110" y="310" width="140" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="crm" value="CRM System" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
                     <mxGeometry x="530" y="700" width="140" height="80" as="geometry"/>
@@ -158,16 +158,24 @@
                         <mxPoint x="370" y="480" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="flow7" value="Аутентификация" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="api-gateway" target="iam" edge="1">
-                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                <mxCell id="flow7" value="Аутентификация" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;" parent="1" source="api-gateway" target="iam" edge="1">
+                    <mxGeometry x="-0.0667" y="-20" width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="630" y="580" as="sourcePoint"/>
-                        <mxPoint x="760" y="480" as="targetPoint"/>
+                        <mxPoint x="790" y="540" as="targetPoint"/>
+                        <mxPoint x="1" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="flow8" value="Проверка тегов" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="iam" target="data-classification" edge="1">
+                <mxCell id="flow7b" value="Результат аутентификации" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;labelBackgroundColor=none;dashed=1;" parent="1" source="iam" target="api-gateway" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="830" y="580" as="sourcePoint"/>
-                        <mxPoint x="920" y="480" as="targetPoint"/>
+                        <mxPoint x="790" y="540" as="sourcePoint"/>
+                        <mxPoint x="600" y="500" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="flow8" value="Проверка тегов" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;" parent="1" source="iam" target="data-classification" edge="1">
+                    <mxGeometry x="0.12" y="14" width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="900" y="540" as="sourcePoint"/>
+                        <mxPoint x="1080" y="530" as="targetPoint"/>
+                        <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="flow9" value="Шифрование/дешифрование" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="data-classification" target="encryption-service" edge="1">
@@ -182,19 +190,28 @@
                         <mxPoint x="1410" y="500" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="flow18" value="Логирование запросов" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="api-gateway" target="audit-monitoring" edge="1">
-                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                <mxCell id="flow18" value="Логирование запросов" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;" edge="1" parent="1" source="api-gateway" target="audit-monitoring">
+                    <mxGeometry x="-0.066" y="15" width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="670" y="520" as="sourcePoint"/>
                         <mxPoint x="1340" y="540" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="740" y="520"/>
+                            <mxPoint x="740" y="370"/>
+                        </Array>
+                        <mxPoint x="-1" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="flow19" value="Логирование доступа" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="iam" target="audit-monitoring" edge="1">
-                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                <mxCell id="flow19" value="Логирование доступа" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.007;entryY=0.638;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;" edge="1" parent="1" source="iam" target="audit-monitoring">
+                    <mxGeometry x="0.004" y="-15" width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="815" y="520" as="sourcePoint"/>
                         <mxPoint x="1340" y="540" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="845" y="380"/>
+                        </Array>
+                        <mxPoint x="-1" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="flow20" value="Аудит доступа к данным" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="medical-records-service" target="audit-monitoring" edge="1">
+                <mxCell id="flow20" value="Аудит доступа к данным" style="endArrow=block;endFill=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="medical-records-service" target="audit-monitoring">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="920" y="780" as="sourcePoint"/>
                         <mxPoint x="1375" y="500" as="targetPoint"/>
